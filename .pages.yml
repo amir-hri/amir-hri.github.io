@@ -1,0 +1,59 @@
+media: media
+
+content:
+  - name: concepts
+    label: Pocket Concepts
+    type: collection
+    path: _concepts
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+
+    view:
+      primary: title
+      sort: date
+      order: desc
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+
+      - name: topic
+        label: Topic
+        type: string
+
+      - name: summary
+        label: Your short explanation
+        type: text
+        required: true
+
+      - name: image
+        label: Optional picture
+        type: image
+
+      - name: image_alt
+        label: Describe the picture
+        type: string
+
+      - name: takeaway
+        label: Key takeaway
+        type: text
+
+      - name: source
+        label: Paper or project URL
+        type: string
+
+      - name: body
+        label: Optional deeper explanation
+        type: rich-text
+
+      - name: published
+        label: Published
+        type: boolean
+        default: false
